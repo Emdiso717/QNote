@@ -1,4 +1,45 @@
 site_name: Q`s Note
 site_url: https://mydomain.org/mysite
+repo_url: https://github.com/Emdiso717/QNote
+repo_name: Emdiso717/QNote
+edit_uri: edit/main/docs/
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
 theme:
+  icon:
+    repo: fontawesome/brands/git-alt
   name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+  palette: 
+
+    # Palette toggle for light mode
+    - scheme: default
+      primary: white
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode

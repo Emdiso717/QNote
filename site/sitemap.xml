@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mydomain.org/mysite/</loc>
-         <lastmod>2025-09-24</lastmod>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Learn/FEM/</loc>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Learn/xd/</loc>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Paper%20Note/1/</loc>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Paper%20Note/A%20Stiffly%20Accurate%20Integrator%20for%20Elastodynamic%20Problems/</loc>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Paper%20Note/efficient%20adaptive%20step%20size%20control%20for%20exponential%20integrators/</loc>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/Paper%20Note/exponential%20propagation%20iterative/</loc>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/ZJU%20courses/CA/</loc>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/math/Runge-kutta/</loc>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/math/krylov/</loc>
+         <lastmod>2025-11-07</lastmod>
     </url>
 </urlset>

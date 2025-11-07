@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/">
+        <link rel="canonical" href="https://mydomain.org/mysite/Paper%20Note/efficient%20adaptive%20step%20size%20control%20for%20exponential%20integrators/">
       
       
+        <link rel="prev" href="../A%20Stiffly%20Accurate%20Integrator%20for%20Elastodynamic%20Problems/">
       
-        <link rel="next" href="Learn/FEM/">
+      
+        <link rel="next" href="../exponential%20propagation%20iterative/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>Q`s Note</title>
+        <title>Efficient adaptive step size control for exponential integrators - Q`s Note</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +50,7 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-qs-note" class="md-skip">
+        <a href="#efficient-adaptive-step-size-control-for-exponential-integrators" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Q`s Note" class="md-header__button md-logo" aria-label="Q`s Note" data-md-component="logo">
+    <a href="../.." title="Q`s Note" class="md-header__button md-logo" aria-label="Q`s Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to Q`s note
+              Efficient adaptive step size control for exponential integrators
             
           </span>
         </div>
@@ -213,11 +215,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -238,7 +238,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="Learn/FEM/" class="md-tabs__link">
+        <a href="../../Learn/FEM/" class="md-tabs__link">
           
   
   
@@ -254,11 +254,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="Paper%20Note/1/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1/" class="md-tabs__link">
           
   
   
@@ -278,7 +280,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="ZJU%20courses/CA/" class="md-tabs__link">
+        <a href="../../ZJU%20courses/CA/" class="md-tabs__link">
           
   
   
@@ -298,7 +300,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="math/Runge-kutta/" class="md-tabs__link">
+        <a href="../../math/Runge-kutta/" class="md-tabs__link">
           
   
   
@@ -338,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Q`s Note" class="md-nav__button md-logo" aria-label="Q`s Note" data-md-component="logo">
+    <a href="../.." title="Q`s Note" class="md-nav__button md-logo" aria-label="Q`s Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -365,19 +367,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -388,7 +381,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -441,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Learn/FEM/" class="md-nav__link">
+      <a href="../../Learn/FEM/" class="md-nav__link">
         
   
   
@@ -464,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Learn/xd/" class="md-nav__link">
+      <a href="../../Learn/xd/" class="md-nav__link">
         
   
   
@@ -491,24 +483,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -521,7 +518,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Paper Note
@@ -535,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Paper%20Note/1/" class="md-nav__link">
+      <a href="../1/" class="md-nav__link">
         
   
   
@@ -558,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Paper%20Note/A%20Stiffly%20Accurate%20Integrator%20for%20Elastodynamic%20Problems/" class="md-nav__link">
+      <a href="../A%20Stiffly%20Accurate%20Integrator%20for%20Elastodynamic%20Problems/" class="md-nav__link">
         
   
   
@@ -578,10 +575,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Paper%20Note/efficient%20adaptive%20step%20size%20control%20for%20exponential%20integrators/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Efficient adaptive step size control for exponential integrators
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -592,6 +611,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#leja-interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leja interpolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive-step-size-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptive Step-size Controller
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -604,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Paper%20Note/exponential%20propagation%20iterative/" class="md-nav__link">
+      <a href="../exponential%20propagation%20iterative/" class="md-nav__link">
         
   
   
@@ -675,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ZJU%20courses/CA/" class="md-nav__link">
+      <a href="../../ZJU%20courses/CA/" class="md-nav__link">
         
   
   
@@ -746,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="math/Runge-kutta/" class="md-nav__link">
+      <a href="../../math/Runge-kutta/" class="md-nav__link">
         
   
   
@@ -769,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="math/krylov/" class="md-nav__link">
+      <a href="../../math/krylov/" class="md-nav__link">
         
   
   
@@ -812,6 +869,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#leja-interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leja interpolation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive-step-size-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptive Step-size Controller
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -829,7 +912,16 @@
   
 
 
-<h1 id="welcome-to-qs-note">Welcome to Q`s note</h1>
+<h1 id="efficient-adaptive-step-size-control-for-exponential-integrators">Efficient adaptive step size control for exponential integrators</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>这篇文章关键在于对于原本的指数积分器实现了一个步长自适应的机制。关注点也先放在这个机制上</p>
+</div>
+<h2 id="leja-interpolation">Leja interpolation</h2>
+<p>[TODO]</p>
+<h2 id="adaptive-step-size-controller">Adaptive Step-size Controller</h2>
+<p>首先，对于常见的显示，或者一般的隐式方法求解时，无论步长是多少，每一步的计算成本是固定的，隐式固定在于对于性质良好矩阵进行LU分解。当衡量每一步的最大步长时，往往是通过每一步的截断误差判断。对于这样固定的开销的方法，截断误差也往往是线性的 <span class="arithmatex">\(e^n = D(\Delta t^n)^{p+1}\)</span> p是方法的阶数。 通常会设置一个 tol 来限制误差。 所以很容易推倒出下一步步长 <span class="arithmatex">\(\Delta t^{n+1} = \Delta t^{n}(\frac{tol}{e^n})^{\frac{1}{p+1}}\)</span></p>
+<p>但是对于使用每一步开销需要使用迭代法求解的，比如 krylov 等，就不能简单考虑成线性求解了。此时估计一个开销函数 <span class="arithmatex">\(c^n = \frac{i^n}{\Delta t^n}\)</span> 来计算每一个时间下的开销。 目的就是使得 $c^n t $ 结果最小 ,于是使用梯度下降，<span class="arithmatex">\(T^{n+1} = T^{n} - k ∇C^n(T^n)\)</span> ，并将梯度结果近似为 ：<span class="arithmatex">\(\frac{C^n(T^n)-C^{n-1}(T^{n-1})}{T^n-T^{n-1}}\)</span></p>
 
 
 
@@ -878,12 +970,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="javascripts/katex.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       

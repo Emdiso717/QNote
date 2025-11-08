@@ -1,0 +1,1344 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/ZJU%20courses/CA/">
+      
+      
+        <link rel="prev" href="../../Paper%20Note/exponential%20propagation%20iterative/">
+      
+      
+        <link rel="next" href="../../math/Runge-kutta/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>计算机动画 期末速成 - Q`s Note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Q`s Note" class="md-header__button md-logo" aria-label="Q`s Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Q`s Note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              计算机动画 期末速成
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Emdiso717/QNote" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Emdiso717/QNote
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome to Q`s note
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Learn/FEM/" class="md-tabs__link">
+          
+  
+  
+  Learn
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Paper%20Note/1/" class="md-tabs__link">
+          
+  
+  
+  Paper Note
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  ZJU courses
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../math/Runge-kutta/" class="md-tabs__link">
+          
+  
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Q`s Note" class="md-nav__button md-logo" aria-label="Q`s Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Q`s Note
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Emdiso717/QNote" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Emdiso717/QNote
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome to Q`s note
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Learn
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Learn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Learn/FEM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finite Element Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Learn/xd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linear Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Paper Note
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Paper Note
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Paper%20Note/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparative performance of exponential, implicit, and explicit integrators for stiff systems of ODEs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Paper%20Note/A%20Stiffly%20Accurate%20Integrator%20for%20Elastodynamic%20Problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A Stiffly Accurate Integrator for Elastodynamic Problems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Paper%20Note/efficient%20adaptive%20step%20size%20control%20for%20exponential%20integrators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Efficient adaptive step size control for exponential integrators
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Paper%20Note/exponential%20propagation%20iterative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exponential Propagation Iterative EPI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    ZJU courses
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            ZJU courses
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    计算机动画 期末速成
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Math
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/Runge-kutta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Runge Kutta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/krylov/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Krylov Subspace Methods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">计算机动画 期末速成</h1>
+<div class="admonition info">
+<p class="admonition-title">考试形式</p>
+<p>判断十五题，每题两分
+问答题七题，每题十分</p>
+</div>
+<details class="note">
+<summary>人的五感</summary>
+<p>视觉、听觉、嗅觉、味觉、触觉</p>
+</details>
+<details class="note">
+<summary>2019年的图灵奖获得者</summary>
+<p>（Patrick  Hanrahan，Edwin Catmull）</p>
+</details>
+<details class="note">
+<summary>动画基本知识、动画形成的视觉原理</summary>
+<p>在图形上加上时间维度、动画师指定物体如何在空间和时间上移动
+动画：每秒若干帧顺序播放若干静止图像帧已产生错觉的艺术
+动画形成的视觉原理：利用人类 <strong>视觉残留</strong> 上个画面还没消失，下一个画面进入视觉如此循环往复，形成动画。</p>
+</details>
+<details class="note">
+<summary>计算机动画在影视特技起到什么作用？</summary>
+<ul>
+<li>实现现实世界中<strong>无法拍摄到</strong> 的 ：恐龙等</li>
+<li>可以拍摄到 <strong>成本高、太危险</strong> ：龙卷风</li>
+</ul>
+</details>
+<details class="note">
+<summary>了解Blender软件的特殊性</summary>
+<p>开源</p>
+</details>
+<details class="note">
+<summary>计算机动画中的运动包括哪些参数？</summary>
+<ul>
+<li>景物位置、方向、大小、形状变化</li>
+<li>虚拟摄像机的运动</li>
+<li>表面纹理和色彩变化</li>
+</ul>
+</details>
+<details class="note">
+<summary>动画中的“恐怖谷效应”Uncanny Valley</summary>
+<p>当机器和人类相似到一定程度时，就会变得极其反感，哪怕有一点不同也会变得明显刺目</p>
+</details>
+<details class="note">
+<summary>SORA的动画生成流程和原理</summary>
+<p>根据提示词、文本指令、静态图像生成视屏动画
+SORA数据集是短视屏，同类的短视频作为一个数据流形，投影到隐空间降维度，并在隐空间中切割成补丁，加上时间序列构成时空词元。每一个词元会记录帧序列号，和在帧的行序列号（空间位置）。</p>
+</details>
+<details class="note">
+<summary>传统动画应用于三维计算机动画的12条基本原则及其原理</summary>
+<ul>
+<li>Squash and Stretch（挤压和伸展）</li>
+<li>Anticipation（预备动作、预期性）</li>
+<li>Staging（场面调度、镜头布局）</li>
+<li>Straight-Ahead Action and Pose-to-Pose Action（按照时间顺序绘制、先关键帧再中间帧）</li>
+<li>Follow-Through and Overlapping Action（附属部分因惯性继续运动（follow-through）与重叠（身体部分停止时间不一致）动作）</li>
+<li>Slow In and Slow Out（慢入和慢出）</li>
+<li>Arcs（弧形动作）</li>
+<li>Secondary Action（附属动作）</li>
+<li>Timing（时序）</li>
+<li>Exaggeration（夸张）</li>
+<li>Solid drawing（扎实描绘）</li>
+<li>Appeal（吸引力）</li>
+<li>Depth of Field （衍生原则）（景深）</li>
+<li>Balance&amp;Weight （衍生原则）（平衡与重量感）</li>
+</ul>
+</details>
+<details class="note">
+<summary>旋转的5种表示方法</summary>
+<ol>
+<li>Rolation Matrix 
+    差值后不一定是还是旋转矩阵</li>
+<li>Fixed Angle （万向节死锁）
+    不能简单进行数值差值，理解成物体对于世界固定轴旋转</li>
+<li>Euler Angle （万向节死锁）
+    理解成物体带动轴旋转，所以刚好是Fixed Angle的反过程
+    <span class="arithmatex">\(R^{\prime}_z(\theta)R^{\prime}_y(\beta)R_x(\alpha) = R_x(\alpha)R_y(\beta)R_z(\theta)\)</span></li>
+<li>Angle and Axis 决定一个轴和一个旋转角度 <span class="arithmatex">\((n,\theta)\)</span></li>
+<li>Quaternion 方便差值</li>
+</ol>
+</details>
+<details class="note">
+<summary>万向节Gimbal死锁的概念，旋转的四元数表示</summary>
+<p>Gimbal lock occurs when two of the rotation axes align
+<span class="arithmatex">\(q = (w,x,y,z) or (w,V)\\ q = Rot(\theta,(a_x,a_y,a_z)) = (cos(0.5\theta),sin(0.5\theta)(a_x,a_y,a_z))\\Roation: X_n = q X q^{-1}\)</span></p>
+</details>
+<details class="note">
+<summary>旋转矩阵到四元数的转换公式</summary>
+<p><span class="arithmatex">\(\mathbf{R_q}= \left[ \begin{matrix} 1-2y^2-2z^2 &amp; 2xy-2wz &amp; 2xz+2wy\\ 2xy+2wz &amp; 1-2x^2-2z^2 &amp; 2yz-2wx\\ 2xz-2wy &amp; 2yz+2wx &amp; 1-2x^2-2y^2   \end{matrix}  \right]\)</span></p>
+</details>
+<details class="note">
+<summary>Spherical Linear Interpolation (Slerp)公式</summary>
+<p><img alt="alt text" src="../image.png" /></p>
+</details>
+<details class="note">
+<summary>2D Shape Blending涉及哪两个子问题？基于内在形状插值的多边形渐变方法的基本思想。 Edge Tweaking的思想。</summary>
+<p>顶点对应关系、顶点差值问题
+乌龟几何+Lagrange乘数法优化
+顶点角不变，适当调整插值得到的边长，最小化平方占比，借助lagrange乘数</p>
+</details>
+<details class="note">
+<summary>图像morphing的原理</summary>
+<p>指把一幅数字图像以一种自然流畅的、戏剧性的、超现实主义的方式变换到另一幅数字图像。
+先进行几何对齐（网格、线段、曲线、点）两个满射（C1 C2）从初始满射到结束，和从结束满射到初始。设计两个warping函数 随时间变化。对两个warping后结果对齐后进行颜色差值</p>
+</details>
+<details class="note">
+<summary>基于网格的图象morphing 原理</summary>
+<p>对于源图像和目标图像放置在拓扑相似的网格Ms和Md中，对两个网格进行差值得到中间帧的网格M，分别从原图像应用 Ms到M 获取 I0，同理 利用 Md到M 获取I1，对于 I0和I1差值获得中间图像</p>
+</details>
+<details class="note">
+<summary>基于线对的 morphing 原理</summary>
+<p>采取逆向映射，现在两个图中找到 控制形变直线对，差值中间的直线对
+- 对端点差值：旋转会导致变小
+- 对中点朝向长度差值
+再根据单一直线或者多直线变化获得 I1 I2 再次进行交融差值。</p>
+</details>
+<details class="note">
+<summary>视域 morphing 的三个步骤</summary>
+<p>同时差值颜色、集合和视点
+1. 前置变形(Prewarp)。对图象 I0 应用投影变换 H0-1，对图象 I1 应用投影变换 H1-1，生成前
+置变形后的图象 I0′ 和 I1′。
+2. Morphing。采用平行摄象机的方法，线性插值图象 I0′和 I1′ 相应点的位置和颜色，得到图象It’。
+3. 后置变形(Postwarp)。对图象 It’ 应用变换 Ht，生成图象 It</p>
+</details>
+<details class="note">
+<summary>基于 StyleGan 的肖像 Morphing 的原理</summary>
+<p>通过一个神经网络对这个复杂的函数进行建模，神经网络将一个简单的随机变量作为输入，并输出遵循“人脸概率分布”的随机变量。这个简单的随机变量被称为隐码(latent code)，隐码所在的空间称为隐空间(latent space)
+StyleGAN倾向于学习一个平滑的隐空间，即隐空间的接近区域中采样的隐码能生成相似的图像。这表明，在隐空间中的连续移动会产生一条平滑变化的图像路径，并且每个图像都接近目标域（真实的人脸）。
+因此，对StyleGAN的两个隐码进行插值，可以在两个人脸图像之间产生非常自然平滑的渐变。</p>
+</details>
+<details class="note">
+<summary>tyleGan 中的 Coarse styles、 Middle styles、 Fine styles 分别对应人脸的那些语义特征？</summary>
+<p>Coarse styles：控制人脸姿态、人脸几何形状等。大约对应网络的1-4层。
+Middle styles：发型、部分人脸形状等。大约对应网络的5-8层。
+Fine styles：肤色、发色、光影、背景等。大约对应网络剩下的层数。</p>
+</details>
+<details class="note">
+<summary>二、三维形状渐变(morphing)各有什么优缺点</summary>
+<p>二维优点：简单
+二维缺点：没有三维信息
+三维优点：更加逼真
+三维morphing的缺点:是物体之间的对应关系很难建立，而且该方法对物体的几何表示也相当苛刻，比如要求多边形的个数相等，物体的拓扑结构相同等等。</p>
+</details>
+<details class="note">
+<summary>基于星形物体的多面体morphing方法</summary>
+<p>该方法通过合并一对三维多面体物体模型的拓扑结构，使得它们具有相同的顶点/边/面网络结构，然后对相应的顶点进行插值。在物体内选一内点，连接O和物体的顶点V，射线OV和单位球面的交点即为V的投影点(V)P。
+星形物体：至少有一点 能看见所有顶点</p>
+</details>
+<details class="note">
+<summary>基于体表示的三维morphing方法</summary>
+<p>给定源体S和目标体T，与二维图象morphing的思想类似，该方法首先根据指定的对应特征生成一空间变换，该变换使给定的两个体扭曲变形（warp）成S’和T’，达到几何对齐的目的；然后对得到的两个扭曲变形体S’和T’进行混合。
+对特征元素e（位置，坐标系），初始和结束进行差值。逆向映射 通过s‘找到s初中的坐标，同理S末到 T‘。之后在进行混合。
+多特征元素依赖加权 通常是 到e到距离
+- 点：直接距离
+- 边：到边的距离
+- 长方形：可以是到边最短距离 也可以是到面最短距离</p>
+</details>
+<details class="note">
+<summary>基于变分隐式曲面的三维Morphing</summary>
+<p>建立源物体和目标物体所对应的隐式曲面，差值这两个函数。
+2D情形：对于二维形状，他们把所有的数据约束放在两个平面上，一个平面对应一个形状。然后把这两个平面平行地放在三维空间中。在形状的边界上指定0值约束，而在指向形状中心的边界法向方向指定正值约束。然后采用变分插值技术（薄板插值的三维推广），得到一个三维空间的隐式函数。中间帧的形状为这个三维函数的二维切片（零值轮廓）。
+3D情形：三维Morphing则可通过4D插值问题来进行。
+变分最小化能量函数（这个计算应该不用会吧）然后差值</p>
+</details>
+<details class="note">
+<summary>粒子系统的基本原理、粒子系统可以生成哪些自然现象？</summary>
+<p>将许多简单形状的微小粒子作为基本元素聚集起来形成一个不规则的模糊物体，每个粒子均经历出生、成长、衰老和死亡的过程，与粒子有关的每一个参数均将受到一个随机过程的控制。
+自然现象：云雾、流水、爆炸烟尘、火、雨……</p>
+</details>
+<details class="note">
+<summary>元球的融合原理</summary>
+<p>元球相互靠近到一定距离产生变形，再进一步靠近时则融合成光滑表面。</p>
+</details>
+<details class="note">
+<summary>粒子的碰撞检测和碰撞响应</summary>
+<p>$$
+N•(P-P_0)&lt;0
+$$
+把模拟回退到接触点,只需修改粒子的位置和速度</p>
+</details>
+<details class="note">
+<summary>为什么需要群组动画？</summary>
+<p>得到大场面效果、减少画师工作量、节约拍摄成本</p>
+</details>
+<details class="note">
+<summary>Flocking(群体) System的包含哪三种层次的行为？</summary>
+<p>Action Selection: 基于人工智能的行为选择
+Steering: 抽象化的导航行为
+Locomotion: 实体化的个体行为</p>
+</details>
+<details class="note">
+<summary>Boids模型的三条原则，每条原则的含义</summary>
+<p>避免碰撞原理（Collision Avoidance）：不与其他群体成员碰撞
+速度匹配原则（Velocity Matching） ：尽量保持与周围邻居群体成员的速度匹配
+群体合群原则(Flock Centering)：群体成员尽量靠近</p>
+</details>
+<details class="note">
+<summary>Reynolds导航方法中的追逐和躲避模型、障碍避免模型、路径跟随、流场跟随行为模型、领导模型</summary>
+<p>追逐和躲避模型：追逐一个移动的角色，在预测区间内不会转向
+障碍避免模型：在该角色前面，保证有一个假想圆柱的自由空间(实际上是预期性碰撞避免)。
+路径跟随 ：其任务是在一个给定的方向进行路径遍历（左边进入，右边退出），同时保持其中心位于灰色区域。
+流场跟随行为：假设运动区域已经有一个速度流场，估算角色将来的位置并计算在这点的流场
+领导模型：领导障碍避免，有一个假象圆柱，如果跟随者在其中需要调整位置。如果不在的话，追逐和躲避模型，把领导后偏移量一个点设置为到达点追随。</p>
+</details>
+<details class="note">
+<summary>Helbing基于社会力模型的群体行为模拟方法的基本原理</summary>
+<p>把人抽象为自我驱动的质点，收到社会力影响（受主观 其他个体 障碍物影响）</p>
+</details>
+<details class="note">
+<summary>羊群效应的原理</summary>
+<p>$$
+e^0_i(t) = (1-p_i)e_i+p_i<e_j^0(t)>
+$$
+恐慌的人群呈现羊群效应、个体行为或两者的混合；</p>
+</details>
+<details class="note">
+<summary>相互速度障碍物(RVO)原理</summary>
+<p>个体匀速运动，在速度域中计算出可能导致碰撞的速度集合，并对自身调整，同时分配给相关个体，相互协调完成任务。
+也就是 B 有一个圆形碰撞范围，如果AB相对速度方向穿过这个，代表未来会相撞</p>
+</details>
+<details class="note">
+<summary>连续人群(Continuum Crowds)的原理</summary>
+<p>在该模型中，动态势能场同时将全局导航与移动障碍物（例如其他人）整合在一起，无需明确碰撞避免即可有效地解决大规模人群的运动。仿真可以以交互速率运行，在各种条件下平稳流动，并自然展现了在真实人群中观察到的紧急现象。
+人群转成为密度场、计算代价场c、计算势能场、更新每一个人位置、保持最小距离。</p>
+</details>
+<details class="note">
+<summary>正向运动学、逆向运动学原理(IK)，逆向雅克比方法求解IK的原理循环坐标下降法(CCD)原理。</summary>
+<p>Forward Kinematics：动画师通过直接指定关节处的关节运动参数来控制物体的运动
+Inverse Kinematics：动画师指定目标位置，系统求解满足要求的关节角
+逆向Jocabian ：对方程求时间偏导，得到笛卡尔坐标系下速度和 关节坐标系下速度之间关系 <span class="arithmatex">\(V = J \theta\)</span> 此时 通过求J的逆矩阵即可获得 关节坐标系下速度，此时<span class="arithmatex">\(\theta_{i+1} = \theta_i +t \theta\)</span>
+循环坐标下降：对所有受IK影响的骨骼，按从最远侧子骨骼到父骨骼的顺序执行迭代操作：旋转当前骨骼，使当前骨骼位置到目标骨骼的连线指向IK目标位置。</p>
+</details>
+<details class="note">
+<summary>FK vs. IK优缺点</summary>
+<p>FK优点：精准、确定、实时
+FK确定：难以控制末端的位置
+IK优点：方便控制末端的位置
+IK缺点：可能会有多个解、无解等。</p>
+</details>
+<details class="note">
+<summary>关机动画中的关节空间 vs. 笛卡尔空间</summary>
+<p>关节空间：由关节角形成的空间、可对所有关节进行细微控制
+笛卡尔空间：三维空间、指定与环境的相互作用</p>
+</details>
+<details class="note">
+<summary>数值求解IK有哪些方法?</summary>
+<p>逆向雅克比方法、循环坐标下降法、基于优化的方法、基于样例的方法、FABRIK 法）"</p>
+</details>
+<details class="note">
+<summary>FABRIK 法的原理</summary>
+<p>以向前迭代和向后迭代的方式更新关节位置，从而使得末端影响器达到目标位置。
+初始化位置坐标等，把末端点<span class="arithmatex">\(P_4\)</span>移动到目标点，在<span class="arithmatex">\(P_3\)</span>和<span class="arithmatex">\(P_{4_new}\)</span>连线上找到新的<span class="arithmatex">\(P_3\)</span>依次到第一个点。之后Backwards 从初始点再到末端点。不断迭代。</p>
+</details>
+<details class="note">
+<summary>基于优化的IK计算方法和目标函数</summary>
+<p>把问题转化为非线性优化问题，最小化目标函数、约束、迭代算法
+目标函数：
+$$
+G(\theta)= w|p_g-p_e|^2 + (1-w)(|r_x^g-r_x^e|^2 + |r_y^g-r_y^g|^2)
+$$</p>
+</details>
+<details class="note">
+<summary>基于深度学习的姿态恢复的优缺点</summary>
+<p>优点：精度高、自动化实时、适应性强、多场景应用
+缺点：数据依赖、算力要求高、可解释性差、过度拟合</p>
+</details>
+<details class="note">
+<summary>基于运动捕获的关节动画制作的优缺点？</summary>
+<p>优点：只要能被捕获，可记录人体运动的所有细节，运动真实
+缺点：不容易进行、比较贵</p>
+</details>
+<details class="note">
+<summary>骨架与角色模型的绑定原理，顶点混合(Vertex Blending)的原理。顶点混合的数学表示。</summary>
+<p>角色的表面(外皮)必须随着骨架的运动而运动(变形)
+前臂和后臂仍单独设置动画，但关节处用一柔性的“skin”来连接。
+一个顶点可以由几个不同的矩阵进行加权变换
+$$
+u(t) = \sum w_i B_i(t) M^{-1}P
+$$</p>
+</details>
+<details class="note">
+<summary>运动重定向的基本原理</summary>
+<p>把捕获的运动数据映射到不匹配的虚拟角色上，并满足一些重要的约束
+约束（运动所应满足的性质）:避免脚穿透地板,避免自身穿透, 避免走路时的打滑；
+生成一个与原始运动尽可能接近的新的运动，并强制满足约束条件；
+新的运动可看成是一个时空(space-time)、非线性约束的优化问题。</p>
+</details>
+<details class="note">
+<summary>带几何模型的运动重定向存在哪些挑战？</summary>
+<p>然而，由于动作源和目标角色之间的身体比例差异，为这些角色制作动画常常面临重大挑战，导致运动语义丧失、网格相互穿透和接触不匹配等问题。</p>
+</details>
+<details class="note">
+<summary>运动图(Motion Graph)的基本原理</summary>
+<p>将一组预先获取的运动片段通过特定的相似点连接成一个图结构，来生成新的连续动作。一旦构建了运动图，系统可以从中选取不同的路径，从而生成各种连续、自然的动画，而不需要重新录制新的动作。</p>
+</details>
+<details class="note">
+<summary>基于Blend Shapes表情动画的原理，FACE IK的原理.</summary>
+<p>把这些基本的人脸Shape作为表情基\根据插值这些Blend Shapes来得到任意的表情
+IK:控制脸部上的一些点（类似于IK），而不是权因子 采用最小二乘法求解系数</p>
+</details>
+<details class="note">
+<summary>Deformation与Morphing的区别。与物体表示无关的变形的原理。</summary>
+<p>与Morphing不同，空间变形更具某种随意性，所以空间变形也常称为自由变形(Free Form Deformation)。
+他提出把整体和局部变形(Global and localdeformation)作为新的算子，变化是物体顶点位置的函数</p>
+</details>
+<details class="note">
+<summary>Tapering、Twisting和Bending变形的原理</summary>
+<ul>
+<li>Tapering ：沿着z轴 $z'=z,x'=f(z)x,y'=f(z)y $</li>
+<li>Twisting :<span class="arithmatex">\(z'=z,x'=cos(f(z))x-sin(f(z))y,y'=sin(f(z))x+cos(f(z))y\)</span></li>
+<li>Bending:弯曲角在变形区域外为常数，在中间区域为线性变化</li>
+</ul>
+</details>
+<details class="note">
+<summary>FFD的变形原理</summary>
+<p>物体嵌入一空间，当所嵌的空间变形时，物体也随之变形 这类方法的本质：物体参数化！</p>
+</details>
+<details class="note">
+<summary>扩展的FFD方法EFFD的原理</summary>
+<p>它允许 FFD 型 lattice 作为它结构的一部分，许多个 FFD 型 lattice 可合并构成 EFFD 的 lattic（非平行六面体）
+牛顿迭代反过解除来坐标
+变化位移
+再次带入求解出形变后坐标</p>
+</details>
+<details class="note">
+<summary>基于Cage的变形原理</summary>
+<p>一个包裹高分辨率模型的低分辨率控制网格。
+ 变形原理: (1). 构建模型的Cage；(2). 计算模型的Cage坐标; (3). 编辑Cage模型; (4). 把Cage的变形通过预先计算的Cage坐标光滑传播到其包裹的模型。</p>
+</details>
+<details class="note">
+<summary>Laplacian微分坐标及其变形原理</summary>
+<div class="arithmatex">\[
+\delta_i=\sum \frac{1}{d_i}{v_i-v_j}
+$$
+$$
+\hat{x} = argmin(\|Lx-\delta\|^2+\sum\|x_k-c_k\|^2)
+\]</div>
+</details>
+<details class="note">
+<summary>布料动画和仿真中的核心问题有哪4个？</summary>
+<p>建立布料的物理(力学)模型（表达能力）
+布料物理参数的确定（缝线、纽扣、装饰物等都会影响布料的物理属性）
+物理模型的求解（偏微分方程数值解）
+碰撞检测和响应</p>
+</details>
+<details class="note">
+<summary>布料的物理机械性能主要有哪4种？布料的弹簧-质点模型主要有哪3种弹簧，并图示。</summary>
+<p>拉伸、弯曲、剪切，摩擦
+结构弹簧（相邻点）、剪切弹簧（对角点）、弯曲弹簧（相隔点）</p>
+</details>
+<details class="note">
+<summary>Weil的悬链线表示悬垂布料方法原理</summary>
+<p>把布料悬挂在一些约束点上，基于悬链线计算出布料自由悬挂时的形状。
+Weil方法把一个三角形细分为两个三角形，并沿着新的边生成一条新的悬链线，如下图左所示，最后生成的具有真实感的悬挂的布料如下图右所示。
+该方法不考虑布料的质量、弹性系数等物理因素，不能生成布料的动态效果，只适用于表示悬垂的布料。</p>
+</details>
+<details class="note">
+<summary>Provot的衣服模型的原理</summary>
+<p>Provot提出了一种可以看作是从Breen的粒子系统简化而来的弹簧-质点模型，并在此基础上发展了一套非常简单有效的算法。
+Provot采用了简单高效的显式Euler法求解微分方程组，得益于物理模型的简单方便，Provot的方法在效率上明显比基于Terzopoulos模型的方法要来的高，而且显示效果也不错。</p>
+</details>
+<details class="note">
+<summary>布料动画中大步长隐式方法的原理</summary>
+<p>不想写了 这个还是蛮简单</p>
+</details>
+<details class="note">
+<summary>稳定但反应灵敏的布料的原理</summary>
+<p>这个模型考虑到布料局部在受到压缩作用时并不会出现很大的压缩抗力，而是会很快发生屈曲，因此物理模型中将压缩和弯曲行为合二为一进行建模，因此模型中将不会出现传统弹簧—质点系统中所具有的压缩弹簧。</p>
+</details>
+<details class="info">
+<summary>基于内在形状插值的多边形渐变方法的数学原理</summary>
+<p>乌龟几何+拉格朗日乘数法
+<span class="arithmatex">\(\alpha = (1-t)\alpha_{A_0}+t\alpha_{B_0} \\ \theta_i= (1-t)\theta_{A_i}+t\theta_{B_i}\\ L_i=(1-t)L_{A_i}+tL_{B_i}\)</span> </p>
+<p>但是不封闭 做长度微调 角度不变
+<span class="arithmatex">\(L_{AB_i}= (1-t)L_{A_i}+tL_{B_i}+S_i\)</span></p>
+<p>为了防止除0问题 <span class="arithmatex">\(L_{ABi} = max\{|L_{A_i}-L_{B_i}|,L_{tol}\}\)</span>
+于是定义目标函数 <span class="arithmatex">\(f(S_0,....S_m) = \sum \frac{S_i^2}{L_{AB_i}^2}\)</span></p>
+<p>边界条件 强制封闭：</p>
+<p><span class="arithmatex">\(\phi_1=\sum[(1-t)L_{A_i}+tL_{B_i}+S_i]cos\alpha_i=0\\\)</span>
+<span class="arithmatex">\(\phi_2=\sum[(1-t)L_{A_i}+tL_{B_i}+S_i]sin\alpha_i=0\)</span></p>
+<p>其中 <span class="arithmatex">\(\alpha_i = \alpha_{i-1}+\theta_{i}\)</span> 是与x轴夹角</p>
+<p>借助拉格朗日乘数 对目标函数求偏导
+$$
+\frac{\partial S_i}{\partial \lambda} = \lambda_1 \cos \alpha_i + \lambda_2 \sin \alpha_i = -\frac{2S_i}{L_{AB_i}^2}, 
+\quad (i = 0, 1, \dots, m)\\
+\sum_{i=0}^{m} [(L_{Bi} - L_{Ai})t + L_{Ai}+ S_i] \cos \alpha_i = 0\\
+\sum_{i=0}^{m} [(L_{Bi} - L_{Ai})t + L_{Ai}+ S_i] \sin \alpha_i = 0
+$$
+把S算出带入
+$$
+\begin{cases}
+\lambda_1 E + \lambda_2 F = U \\
+\lambda_1 F + \lambda_2 G = V
+\end{cases}
+$$</p>
+<div class="arithmatex">\[
+\begin{aligned}
+E &amp;= \sum_{i=0}^{m} (L_{ABi})^2 \cos^2 \alpha_i, \\
+F &amp;= \sum_{i=0}^{m} (L_{ABi})^2 \cos \alpha_i \sin \alpha_i, \\
+G &amp;= \sum_{i=0}^{m} (L_{ABi})^2 \sin^2 \alpha_i,
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+U &amp;= \sum_{i=0}^{m} 2\big[t L_{Bi} + (1 - t)L_{Ai} \big] \cos \alpha_i, \\
+V &amp;= \sum_{i=0}^{m} 2\big[t L_{Bi} + (1 - t)L_{Ai}\big] \sin \alpha_i.
+\end{aligned}
+\]</div>
+<p>克莱默法则求解出结果即可</p>
+<div class="arithmatex">\[
+\begin{cases}
+x_i = x_{i-1} + L_{i-1} \cos \alpha_{i-1}, \\
+y_i = y_{i-1} + L_{i-1} \sin \alpha_{i-1},
+\end{cases}
+\quad i = 1, 2, \dots, m.
+\]</div>
+</details>
+<details class="info">
+<summary>图像 Morphing 中由一对直线确定的变换公式</summary>
+<p>$$
+u = \frac{PA}{|PQ|} = (X - P) \cdot \frac{(Q - P)}{|Q - P|} \times \frac{1}{|Q - P|} 
+= \frac{(X - P) \cdot (Q - P)}{|Q - P|^2}\\
+v = AX = (X - P) \cdot \frac{\mathrm{Perpendicular}(Q - P)}{|Q - P|}\\
+X' = P' + u (Q' - P') + v \frac{\mathrm{Perpendicular}(Q' - P')}{|Q' - P'|}
+$$
+逆向变化，先取出 ID 中的X计算出 <span class="arithmatex">\(u v X^{\prime}\)</span> 把原图的 <span class="arithmatex">\(X^{\prime}\)</span> 颜色值给X 一对直线之间的变换实际上是一个由旋转、平移和比例变换复合成的变换。</p>
+</details>
+<details class="info">
+<summary>三维FFD原理</summary>
+<ol>
+<li>确定物体的顶点（或控制顶点）在lattice空间的位置(参数化)。建立FFD块的局部坐标系：
+$$
+X(s,t,u) = X_0 + sS +t T+uU
+$$
+不妨设是一个正方形：
+$$
+P_{ijk} = X_0 +\frac{i}{3l}S + \frac{j}{3m}T + \frac{k}{3n}U
+$$
+解出Lattic坐标为 <span class="arithmatex">\(s =\frac{(T\times U)(X - X_0)}{(T\times U)S}\)</span></li>
+<li>形变
+计算超曲面的局部坐标 <span class="arithmatex">\((u,v,w)=(ls-is,mt-it,nu-iu)\)</span>
+3.带入超曲面方程，找到顶点Q</li>
+</ol>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

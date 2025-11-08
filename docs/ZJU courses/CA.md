@@ -303,7 +303,7 @@
 
 ??? info "基于内在形状插值的多边形渐变方法的数学原理"
     乌龟几何+拉格朗日乘数法
-    $\alpha = (1-t)\alpha_{A_0}+t\alpha_{B_0} \\ \theta_i= (1-t)\theta_{A_0}+t\theta_{B_0}\\ L_i=(1-t)L_{A_0}+tL_{B_0}$ 
+    $\alpha = (1-t)\alpha_{A_0}+t\alpha_{B_0} \\ \theta_i= (1-t)\theta_{A_i}+t\theta_{B_i}\\ L_i=(1-t)L_{A_i}+tL_{B_i}$ 
     
     但是不封闭 做长度微调 角度不变
     $L_{AB_i}= (1-t)L_{A_i}+tL_{B_i}+S_i$
@@ -322,8 +322,8 @@
     $$
     \frac{\partial S_i}{\partial \lambda} = \lambda_1 \cos \alpha_i + \lambda_2 \sin \alpha_i = -\frac{2S_i}{L_{AB_i}^2}, 
     \quad (i = 0, 1, \dots, m)\\\\
-    \sum_{i=0}^{m} [(L_i^B - L_i^A)t + L_i^A+ S_i] \cos \alpha_i = 0\\\\
-    \sum_{i=0}^{m} [(L_i^B - L_i^A)t + L_i^A+ S_i] \sin \alpha_i = 0
+    \sum_{i=0}^{m} [(L_{Bi} - L_{Ai})t + L_{Ai}+ S_i] \cos \alpha_i = 0\\\\
+    \sum_{i=0}^{m} [(L_{Bi} - L_{Ai})t + L_{Ai}+ S_i] \sin \alpha_i = 0
     $$
     把S算出带入
     $$
